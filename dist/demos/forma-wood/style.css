@@ -838,3 +838,5 @@ header { position:relative; }
   .faq summary { font-size:17px; }
 }
 @media(prefers-reduced-motion:reduce) { .hero-content > * { animation:none; } }
+
+.wood-panel.ash .wood-caption{color:#3a2d1a}
