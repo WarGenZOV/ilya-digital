@@ -74,8 +74,21 @@ if (form) {
 
     briefText.value = `Бриф для ILYA DIGITAL\n\nУслуга: ${type.value}\n\nЗадача:\n${text}`;
     output.hidden = false;
-    status.textContent = 'Бриф готов. Скопируйте его и передайте при обсуждении проекта.';
+    status.textContent = 'Бриф готов. Нажмите кнопку Telegram, затем вставьте текст заявки в переписку и отправьте.';
     briefText.focus();
+  });
+
+  $('#send-telegram').addEventListener('click', async () => {
+    const chat = window.open('https://t.me/Yaropolk_2', '_blank', 'noopener,noreferrer');
+    try {
+      await navigator.clipboard.writeText(briefText.value);
+      status.textContent = 'Бриф скопирован. Вставьте его в чат Telegram и отправьте. Если чат не открылся, воспользуйтесь ссылкой @Yaropolk_2.';
+    } catch {
+      briefText.focus();
+      briefText.select();
+      status.textContent = 'Не удалось автоматически скопировать текст. Скопируйте выделенный бриф вручную и отправьте в Telegram.';
+    }
+    if (!chat) status.textContent += ' Если браузер заблокировал новое окно, откройте контактную ссылку вручную.';
   });
 
   $('#copy-brief').addEventListener('click', async () => {
