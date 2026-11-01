@@ -840,3 +840,7 @@ header { position:relative; }
 @media(prefers-reduced-motion:reduce) { .hero-content > * { animation:none; } }
 
 .wood-panel.ash .wood-caption{color:#3a2d1a}
+
+/* Audit: responsive masthead and readable hero */
+@media (min-width:601px) and (max-width:800px){.nav-links{display:none}}
+@media(max-width:600px){.hero{height:auto;min-height:650px;min-height:83svh}.hero-content{position:relative;inset:auto;padding-top:115px;padding-bottom:75px}.hero{overflow:visible}}
