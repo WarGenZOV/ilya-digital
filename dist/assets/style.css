@@ -16,3 +16,6 @@ h1,h2{text-wrap:balance}
 .case-facts small{display:block;font-size:11px;color:var(--muted);margin-bottom:6px}
 .case-facts b{display:block;font-size:12px;font-weight:500;overflow-wrap:anywhere}
 @media(max-width:380px){.case-intro h1{font-size:40px}.project-meta{flex-wrap:wrap}.header-contact{font-size:10px}.site-header{gap:8px}}
+
+/* ILYA DIGITAL brand mark */
+.logo{gap:7px}.logo-mark{width:40px;height:40px;object-fit:contain;flex:0 0 auto}.logo span{margin-left:0}.logo i{display:none}footer .logo-mark{width:34px;height:34px}@media(max-width:700px){.logo{gap:5px;font-size:17px}.logo-mark{width:31px;height:31px}footer .logo-mark{width:30px;height:30px}}
