@@ -79,7 +79,7 @@ if (form) {
   });
 
   $('#send-telegram').addEventListener('click', async () => {
-    const chat = window.open('https://t.me/Yaropolk_2', '_blank', 'noopener,noreferrer');
+    window.open('https://t.me/Yaropolk_2', '_blank', 'noopener,noreferrer');
     try {
       await navigator.clipboard.writeText(briefText.value);
       status.textContent = 'Бриф скопирован. Вставьте его в чат Telegram и отправьте. Если чат не открылся, воспользуйтесь ссылкой @Yaropolk_2.';
@@ -88,7 +88,7 @@ if (form) {
       briefText.select();
       status.textContent = 'Не удалось автоматически скопировать текст. Скопируйте выделенный бриф вручную и отправьте в Telegram.';
     }
-    if (!chat) status.textContent += ' Если браузер заблокировал новое окно, откройте контактную ссылку вручную.';
+
   });
 
   $('#copy-brief').addEventListener('click', async () => {
