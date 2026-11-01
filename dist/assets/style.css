@@ -19,3 +19,7 @@ h1,h2{text-wrap:balance}
 
 /* ILYA DIGITAL brand mark */
 .logo{gap:7px}.logo-mark{width:40px;height:40px;object-fit:contain;flex:0 0 auto}.logo span{margin-left:0}.logo i{display:none}footer .logo-mark{width:34px;height:34px}@media(max-width:700px){.logo{gap:5px;font-size:17px}.logo-mark{width:31px;height:31px}footer .logo-mark{width:30px;height:30px}}
+
+/* Audit fixes: service grid and case typography */
+@media(max-width:700px){.service-details>article>div,.service-details>article>ul{grid-column:2;min-width:0}}
+.case-limit{display:flex;align-items:flex-start;gap:18px}.case-limit>span{color:var(--blue);font-size:24px;line-height:1;flex-shrink:0}.case-limit h3{font-size:27px;margin-bottom:12px}.next-project>div>a{display:block;font-size:32px;line-height:1.15;letter-spacing:-.04em;font-weight:600}@media(max-width:700px){.next-project>div>a{font-size:26px}}
